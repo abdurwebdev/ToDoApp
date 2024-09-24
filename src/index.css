@@ -1,3 +1,140 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#main {
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1 h1 {
+  position: relative;
+  color: #000;
+  -webkit-text-stroke: 1px #91B508;
+}
+
+#page1 h1::after {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  color: #fff;
+}
+
+#marquee {
+  transition: all linear 0.5s;
+}
+
+#marquee h1 {
+  -webkit-text-stroke: 1px #fff;
+}
+
+#button-one button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#button-one button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #91B508;
+  transform: translateY(100%);
+  transition: all ease 0.5s;
+}
+
+#button-one button:hover::before {
+  transform: translateY(0);
+  border-radius: 50px;
+}
+
+#button-one button span {
+  position: relative;
+  z-index: 2;
+}
+
+#button-two button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#button-two button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #91B508;
+  transform: translateY(100%);
+  transition: all ease 0.5s;
+}
+
+#button-two button:hover::before {
+  transform: translateY(0);
+  border-radius: 50px;
+}
+
+#button-two button span {
+  position: relative;
+  z-index: 2;
+}
+
+#menu {
+  background: linear-gradient(to left, #15A13A, #91C01F);
+}
+
+#banner {
+  background: linear-gradient(to bottom left, #9DCB20, #19A239);
+}
+
+.swiper {
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #4caf50;
+  /* Change the color as needed */
+  opacity: 1;
+  /* Optional: make the bullets fully visible */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00ff00;
+  /* Active bullet color */
+}
+
+.card {
+  z-index: 999;
+}
+
+.card .overlay {
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.mains {
+  z-index: 999;
+}
+
+.mains .elems {
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.mains:hover .elems {
+  opacity: 1;
+}
+
+.footer {
+  background: linear-gradient(to bottom left, #00ff00, #9DCB20);
+}
